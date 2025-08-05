@@ -1,0 +1,94 @@
+@import "../../vars.css";
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 80px 10%;
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+}
+
+/* Content Styling */
+.title {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 900;
+  margin-bottom: 20px;
+  font-family: var(--font-roboto);
+  background: linear-gradient(90deg, #ffffff 60%, rgba(216, 127, 25, 0.804) 120%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  letter-spacing: -1px;
+}
+
+.description {
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-family: var(--font-roboto);
+  margin-bottom: 30px;
+  line-height: 1.6;
+  opacity: 0.85;
+  max-width: 500px;
+}
+
+/* Contact Button */
+.contactBtn {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #4b6cb7 100%);
+  color: white;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 35px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+}
+
+.contactBtn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #4b6cb7 0%, var(--color-primary) 100%);
+}
+
+/* Hero Image (Circular) */
+.heroImage {
+  width: 45%;
+  max-width: 400px;
+  border-radius: 50%; /* Makes it a perfect circle */
+  filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.15));
+  animation: floating 4s ease-in-out infinite;
+  object-fit: cover; /* Ensures image fits well within circle */
+}
+
+/* Floating Animation */
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+    padding: 60px 5%;
+  }
+
+  .title,
+  .description {
+    text-align: center;
+  }
+
+  .heroImage {
+    width: 70%;
+  }
+}

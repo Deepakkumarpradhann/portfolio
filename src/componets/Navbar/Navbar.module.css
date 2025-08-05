@@ -1,0 +1,79 @@
+@import "../../vars.css";
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background-color: var(--color-dark);
+  z-index: 2;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+/* Menu Button (Hamburger & Close Icon) */
+.menuBtn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Desktop Navigation */
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menuItems {
+  display: flex;
+  gap: 47px;
+  list-style: none;
+}
+
+.menuItems a {
+  font-size: 25px;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.menuItems a:hover {
+  color: var(--color-primary);
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 830px) {
+  .menuBtn {
+    display: block; /* Show the menu button */
+  }
+
+  .menuItems {
+    position: absolute;
+    top: 70px;
+    right: 10%;
+    background: linear-gradient(
+      0deg,
+      rgba(25, 55, 109, 0.9) 0%,
+      rgba(25, 55, 109, 1) 100%
+    );
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* Show menu when open */
+  .menuOpen {
+    display: flex !important;
+  }
+}

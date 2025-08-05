@@ -1,0 +1,133 @@
+@import "../../vars.css"; /* Importing global styles */
+
+.container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #1e1e2e, #232337);
+  border-radius: 20px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: var(--font-roboto);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 120%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* Flexbox layout for proper right-side alignment */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Left side image styling */
+.aboutImage {
+  width: 320px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Right side content container */
+.aboutItems {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns content to the left */
+  gap: 30px;
+  width: 60%; /* Adjust width as needed */
+}
+
+/* Each item styling */
+.aboutItem {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  width: 100%;
+}
+
+.aboutItem:hover {
+  transform: translateY(-8px) scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Icons */
+.aboutItem img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.aboutItem:hover img {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Text Styling */
+.aboutItemText h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.aboutItem:hover .aboutItemText h3 {
+  color: #ffcc00; /* Highlight text color on hover */
+}
+
+.aboutItemText p {
+  font-size: 18px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.aboutItem:hover .aboutItemText p {
+  opacity: 1;
+}
+
+/* 🔹 Responsive Design */
+@media screen and (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .aboutImage {
+    width: 250px;
+  }
+
+  .aboutItems {
+    align-items: center;
+    width: 100%;
+  }
+
+  .aboutItem {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .aboutItem img {
+    margin: 0 0 10px 0;
+  }
+}

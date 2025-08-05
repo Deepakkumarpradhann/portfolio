@@ -1,0 +1,143 @@
+/* Experience Section Styling */
+.container {
+    padding: 80px 10%;
+    background-color: #121212;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00e0ff;
+  }
+  
+  /* Content Wrapper */
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  /* Skills Section */
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .skill {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 20px rgba(0, 224, 255, 0.4);
+  }
+  
+  .skillImageContainer {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
+  }
+  
+  .skillImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .skill p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  /* Work History Section */
+  .history {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .historyItem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .historyItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 20px rgba(0, 224, 255, 0.4);
+  }
+  
+  .historyItem img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .historyItemDetails {
+    text-align: left;
+  }
+  
+  .historyItemDetails h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00e0ff;
+  }
+  
+  .historyItemDetails p {
+    font-size: 0.9rem;
+    color: #bbbbbb;
+    margin: 5px 0;
+  }
+  
+  .historyItemDetails ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .historyItemDetails ul li {
+    font-size: 0.9rem;
+    color: #dddddd;
+    margin-bottom: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .content {
+      gap: 30px;
+    }
+  
+    .historyItem {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .historyItem img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
